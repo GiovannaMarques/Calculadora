@@ -9,26 +9,25 @@ namespace Calc
             Console.WriteLine("Você quer somar, subtrair, dividir ou multiplicar? " +
                 "+, -, / ou * ");
             string resultadoPergunta = Console.ReadLine();
-            if (resultadoPergunta == "+")
+            
+            switch(resultadoPergunta)
             {
-                int resultado = Somar();
-                Console.WriteLine($"O resultado da soma é {resultado}");
-            }
-            if (resultadoPergunta == "-")
-            {
-                int resultado = Subtrair();
-                Console.WriteLine($"O resultado da subtração é {resultado}");
-            }
-            if (resultadoPergunta == "/")
-            {
-                int resultado = Divisao();
-                Console.WriteLine($"O resultado da divisão é {resultado}");
-    
-            }
-            if (resultadoPergunta == "*")
-            {
-                int resultado = Multiplicacao();
-                Console.WriteLine($"O resultado da multiplicação é {resultado}");
+                case "+":
+                    int resultadoSoma = Somar();
+                    Console.WriteLine($"O resultado da soma é {resultadoSoma}");
+                    break;
+                case "-":
+                    int resultadoSubtracao = Subtrair();
+                    Console.WriteLine($"O resultado da subtração é {resultadoSubtracao}");
+                    break;
+                case "/":
+                    int resultadoDivisao = Divisao();
+                    Console.WriteLine($"O resultado da divisão é {resultadoDivisao}");
+                    break;
+                case "*":
+                    int resultadoMultiplicacao = Multiplicacao();
+                    Console.WriteLine($"O resultado da multiplicação é {resultadoMultiplicacao}");
+                    break;
             }
                 Console.ReadLine();
             }
